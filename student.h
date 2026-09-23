@@ -33,6 +33,9 @@ namespace LeeNaKyung2593202 {
 
     public:
 
+    student(int d=1234567, int s=0, char g='F)')
+        :id(d),score(s),grade(g)
+    {testId(); testScore(); testGrade();}
     // -input: 표준스트림입력으로 멤버변수들 입력, test함수들 호출
     void input () {
          std::cout << "Enter ID: ";
@@ -47,43 +50,36 @@ namespace LeeNaKyung2593202 {
          std::cin >> grade;
          testGrade();
         }
-        
-    
-    // -set 접근함수들: 멤버변수 값 설정 및 test함수 호출
-
-    void setId(int d) {
+        // -set 접근함수들: 멤버변수 값 설정 및 test함수 호출
+         void setId(int d) {
         id = d;
-        testId();
-    }
-
-    void setScore(int s) {
+        testId();}
+        
+        void setScore(int s) {
         score = s;
-        testScore();
-    }
-
-    void setGrade(char g) {
+        testScore();}
+        
+        void setGrade(char g) {
         grade = g;
-        testGrade();
-    }
-
-    // -print: 표준스트림출력으로 멤버변수들 출력
-    void print() {
+        testGrade();}
+        //change into const function
+        // -print: 표준스트림출력으로 멤버변수들 출력
+        void print() const {
         std::cout << "ID: " << id << std::endl;
         std::cout << "Score: " << score << std::endl;
         std::cout << "Grade: " << grade << std::endl;
-    }
+        }
 
-// -get 접근함수들: 멤버변수 값 리턴
-    int getId() {
+    // -get 접근함수들: 멤버변수 값 리턴
+    int getId() const {
         return id;
     }
 
-    int getScore() {
+    int getScore() const {
         return score;
     }
 
-    char getGrade() {
+    char getGrade() const {
         return grade;
     }
  };
-}
