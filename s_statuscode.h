@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "class1.h"
 
 namespace LeeNaKyung2593202 {
 
